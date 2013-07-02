@@ -1,0 +1,16 @@
+<h1>Users#index</h1>
+<p>Find me in app/views/users/index.html.erb</p>
+<% @users.each do |user| %>
+	<%= user.first_name %>
+	<%= user.last_name %> 
+	<%= user.email_address %> 
+	<%= user.password %> 
+	<a href="/users/<%= user.id %>/edit/">Edit</a>
+	<form action="/users/<%= user.id %>" method="post">
+		<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+		<input type="hidden" name="_method" value="delete">
+		<input type="submit" value="Delete">
+	</form>
+	<br>
+<%end%>
+<a href="/users/new">Create New User!</a>

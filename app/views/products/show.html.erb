@@ -1,0 +1,12 @@
+<h1>Products#show</h1>
+<p>Find me in app/views/products/show.html.erb</p>
+<% if flash[:success] %>
+	<p><%= flash[:success]%></p>
+<% end %>
+
+<%= @product.name %><br>
+<%= @product.description %> <br>
+$<%= @product.pricing %> <br>
+<%= @product.category.name %> <br>
+
+<a href="/products/">Home</a>

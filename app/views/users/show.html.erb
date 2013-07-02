@@ -1,0 +1,8 @@
+<% if flash[:success] %>
+	<p><%= flash[:success]%></p>
+<% end %>
+<p><%= @user.first_name %> </p>
+<p><%= @user.last_name %> </p>
+<p><%= @user.email_address %> </p>
+<p><%= @user.password %> </p>
+<a href="/users/">Home</a>

@@ -1,0 +1,9 @@
+<h1>Products#edit</h1>
+<p>Find me in app/views/products/edit.html.erb</p>
+<%= simple_form_for @product do |f| %>
+<%= f.input :name %>
+<%= f.input :description, as: :text %>
+<%= f.input :pricing %>
+<%= f.select :category_id, Category.all.map { |r| [r.name, r.id] }, include_blank: true %>
+<%= f.button :submit %>
+<% end %>
