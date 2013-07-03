@@ -9,8 +9,7 @@ class CommentsController < ApplicationController
   end
 
   def create
-  	@product = Product.find(params[:input_html])
-  	@comment = @product.comments.create(params[:comment])
+  	@comment = Comment.create(params[:comment])
   		redirect_to product_path(@product)
   end
 
